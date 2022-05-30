@@ -19,9 +19,9 @@
                 <div class="header__top-container">
                     <a class="header__logo" href="#" aria-label="Логотип радио W-wave">
                         <picture class="logo__image">
-                            <source srcset="images/header/logo.svg" media="(min-width:1110px)">
-                            <source srcset="images/header/logo-1024.svg" media="(min-width:540px)">
-                            <source srcset="images/header/logo-320.svg" media="(max-width:539px)">
+                            <source srcset="images/header/logo.svg" media="(min-width:1920px)">
+                            <source srcset="images/header/logo-1024.svg" media="(min-width:768px)">
+                            <source srcset="images/header/logo-320.svg" media="(max-width:767px)">
                             <img class="logo__image" src="images/header/logo.svg" alt="W-Wave">
                         </picture>
                     </a>
@@ -372,8 +372,9 @@
                     </a>
                 </div>
                 <picture class="hero__picture">
-                    <source srcset="images/hero/hero-microphone.png" media="(min-width:1110px)">
-                    <source srcset="images/hero/hero-microphone-1024.png" media="(min-width:823px)">
+                    <source srcset="images/hero/hero-microphone-2x.png 2x" media="(min-width:1920px)">
+                    <source srcset="images/hero/hero-microphone.png" media="(min-width:1920px)">
+                    <source srcset="images/hero/hero-microphone-1024.png" media="(min-width:1024px)">
                     <img src="images/hero/hero-microphone.png" alt="Фоновое изображение"
                          aria-hidden="true">
                 </picture>
@@ -941,9 +942,10 @@
                 </button>
             </div>
         </section>
-        <section class="section broadcast" id="broadcast">
+        <section class="section broadcast">
             <div class="content-container broadcast__container">
-                    <div class="broadcast__top" id="broadcast__top">
+                <div class="broadcast__menu">
+                    <div class="broadcast__top">
                         <h2 class="broadcast__heading heading-general">
                             Передачи
                         </h2>
@@ -959,11 +961,9 @@
                             </select>
                         </div>
                     </div>
-                    <div class="broadcast__archive flex" id="broadcast__archive">
+                    <div class="broadcast__archive flex">
                         <picture class="archive__image">
                             <source srcset="images/broadcast/microphone.png" media="(min-width:540px)">
-                            <source srcset="images/broadcast/microphone-768.png" media="(max-width:768px)">
-                            <source srcset="images/broadcast/microphone-320.png" media="(max-width:767px)">
                             <img class="archive__image" src="images/broadcast/microphone.png"
                                  alt="Изображение передачи" aria-hidden="true">
                         </picture>
@@ -977,7 +977,8 @@
                             </p>
                         </div>
                     </div>
-                <ul class="broadcast__list li-reset flex" id="broadcast__list">
+                </div>
+                <ul class="broadcast__list li-reset flex">
                     <li class="broadcast__item" tabindex="0">
                         <picture class="broadcast__picture">
                             <source srcset="images/broadcast/broadcast-1.jpg" media="(min-width:540px)">
@@ -1094,6 +1095,27 @@
                     </li>
                 </ul>
             </div>
+            <div class="broadcast__archive-mobile">
+                <div class="archive-mobile__wrapper">
+                    <picture class="archive__image">
+                        <source srcset="images/broadcast/microphone-768.png" media="(max-width:1023px)">
+                        <source srcset="images/broadcast/microphone-320.png" media="(max-width:767px)">
+                        <img class="archive__image" src="images/broadcast/microphone.png"
+                             alt="Изображение передачи" aria-hidden="true">
+                    </picture>
+                    <div class="archive__wrapper">
+                        <button class="archive__btn btn-reset">
+                            Архив
+                        </button>
+                        <p class="archive__text">
+                            В архив попадают все передачи, которые вы пропустили!
+                            <span class="archive__text-special">
+                            Enjoy :)
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="section guests" id="guests">
             <div class="content-container">
@@ -1207,8 +1229,8 @@
                     <div class="guest__info-plug">
                         <div class="guest__plug flex" id="plug">
                             <picture class=class="guest__avatar-plug">
-                                <source srcset="images/guests/user-plug.svg" media="(min-width:1110px)">
-                                <source srcset="images/guests/user-plug-1024.svg" media="(max-width:1024px)">
+                                <source srcset="images/guests/user-plug.svg" media="(min-width:1920px)">
+                                <source srcset="images/guests/user-plug-1024.svg" media="(min-width:1024px)">
                                 <source srcset="images/guests/user-plug-768.svg" media="(min-width:768px)">
                                 <source srcset="images/guests/user-plug-320.svg" media="(max-width:767px)">
                                 <img class="guest__avatar-plug" src="images/guests/user-plug.svg"
@@ -1220,8 +1242,8 @@
                         </div>
                         <div class="guest__info" id="guest__info-6">
                             <picture class="guest__avatar">
-                                <source srcset="images/guests/user.jpg" media="(min-width:1110px)">
-                                <source srcset="images/guests/user-1024.jpg" media="(max-width:1024px)">
+                                <source srcset="images/guests/user.jpg" media="(min-width:1920px)">
+                                <source srcset="images/guests/user-1024.jpg" media="(min-width:1024px)">
                                 <source srcset="images/guests/user-768.jpg" media="(min-width:768px)">
                                 <source srcset="images/guests/user-320.jpg" media="(max-width:767px)">
                                 <img class="guest__avatar" src="images/guests/user.jpg"
@@ -1320,49 +1342,47 @@
                             <span class="checkbox" tabindex="0"></span>
                         </label>
                     </div>
-                    <div class="playlist__swiper">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide" role="slider">
-                                    <button class="playlist__swiper-btn btn-reset">
-                                        Постпанк
-                                    </button>
-                                </div>
-                                <div class="swiper-slide" role="slider">
-                                    <button class="playlist__swiper-btn btn-reset">
-                                        Хардкор
-                                    </button>
-                                </div>
-                                <div class="swiper-slide" role="slider">
-                                    <button class="playlist__swiper-btn btn-reset">
-                                        Панк-рок
-                                    </button>
-                                </div>
-                                <div class="swiper-slide" role="slider">
-                                    <button class="playlist__swiper-btn btn-reset">
-                                        Рок
-                                    </button>
-                                </div>
-                                <div class="swiper-slide" role="slider">
-                                    <button class="playlist__swiper-btn btn-reset">
-                                        Прогрессивный рок
-                                    </button>
-                                </div>
-                                <div class="swiper-slide" role="slider">
-                                    <button class="playlist__swiper-btn btn-reset">
-                                        Электронная музыка
-                                    </button>
-                                </div>
-                                <div class="swiper-slide" role="slider">
-                                    <button class="playlist__swiper-btn btn-reset">
-                                        Классическая музыка
-                                    </button>
-                                </div>
-                                <div class="swiper-slide" role="slider">
-                                    <button class="playlist__swiper-btn btn-reset">
-                                        Звуки природы и&nbsp;шум города
-                                    </button>
-                                </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" role="slider">
+                                <button class="playlist__swiper-btn btn-reset">
+                                    Постпанк
+                                </button>
+                            </div>
+                            <div class="swiper-slide" role="slider">
+                                <button class="playlist__swiper-btn btn-reset">
+                                    Хардкор
+                                </button>
+                            </div>
+                            <div class="swiper-slide" role="slider">
+                                <button class="playlist__swiper-btn btn-reset">
+                                    Панк-рок
+                                </button>
+                            </div>
+                            <div class="swiper-slide" role="slider">
+                                <button class="playlist__swiper-btn btn-reset">
+                                    Рок
+                                </button>
+                            </div>
+                            <div class="swiper-slide" role="slider">
+                                <button class="playlist__swiper-btn btn-reset">
+                                    Прогрессивный рок
+                                </button>
+                            </div>
+                            <div class="swiper-slide" role="slider">
+                                <button class="playlist__swiper-btn btn-reset">
+                                    Электронная музыка
+                                </button>
+                            </div>
+                            <div class="swiper-slide" role="slider">
+                                <button class="playlist__swiper-btn btn-reset">
+                                    Классическая музыка
+                                </button>
+                            </div>
+                            <div class="swiper-slide" role="slider">
+                                <button class="playlist__swiper-btn btn-reset">
+                                    Звуки природы и&nbsp;шум города
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1381,9 +1401,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-1.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-1-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-1-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-1.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-1-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-1-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-1.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1402,9 +1422,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-2.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-2-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-2-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-2.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-2-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-2-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-2.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1423,9 +1443,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-3.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-3-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-3-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-3.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-3-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-3-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-3.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1444,9 +1464,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-4.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-4-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-4-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-4.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-4-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-4-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-4.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1465,9 +1485,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-5.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-5-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-5-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-5.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-5-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-5-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-5.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1486,9 +1506,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-6.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-6-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-6-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-6.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-6-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-6-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-6.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1507,9 +1527,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-7.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-7-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-7-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-7.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-7-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-7-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-7.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1528,9 +1548,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-8.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-8-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-8-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-8.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-8-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-8-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-8.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1549,9 +1569,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-9.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-9-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-9-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-9.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-9-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-9-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-9.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1570,9 +1590,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-10.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-10-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-10-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-10.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-10-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-10-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-10.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1591,9 +1611,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-11.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-11-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-11-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-11.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-11-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-11-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-11.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1612,9 +1632,9 @@
                         <li class="playlist__item" tabindex="0">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-12.jpg" media="(min-width:1110px)">
-                                    <source srcset="images/playlist/playlist-12-1024.jpg" media="(min-width:540px)">
-                                    <source srcset="images/playlist/playlist-12-320.jpg" media="(max-width:539px)">
+                                    <source srcset="images/playlist/playlist-12.jpg" media="(min-width:1920px)">
+                                    <source srcset="images/playlist/playlist-12-1024.jpg" media="(min-width:1024px)">
+                                    <source srcset="images/playlist/playlist-12-320.jpg" media="(max-width:1023px)">
                                     <img class="playlist__cover" src="images/playlist/playlist-12.jpg" alt="Обложка альбома"
                                          aria-hidden="true">
                                 </picture>
@@ -1646,10 +1666,11 @@
         <section class="section promo" id="promo">
             <div class="content-container promo__container flex">
                 <picture class="promo__picture">
-                    <source srcset="images/promo/radio-background.png" media="(min-width:1110px)">
-                    <source srcset="images/promo/radio-background-1024.png" media="(min-width:824px)">
-                    <source srcset="images/promo/radio-background-768.png" media="(min-width:540px)">
-                    <source srcset="images/promo/radio-background-320.png" media="(max-width:539px)">
+                    <source srcset="images/promo/radio-background-retina.png 2x" media="(min-width:1920px)">
+                    <source srcset="images/promo/radio-background.png" media="(min-width:1920px)">
+                    <source srcset="images/promo/radio-background-1024.png" media="(min-width:1024px)">
+                    <source srcset="images/promo/radio-background-768.png" media="(min-width:768px)">
+                    <source srcset="images/promo/radio-background-320.png" media="(max-width:767px)">
                     <img class="promo__picture" src="images/promo/radio-background.png" alt="Промо-фотография" aria-hidden="true">
                 </picture>
                 <div class="promo__info">
@@ -1657,10 +1678,10 @@
                         Будь с&nbsp;нами на&nbsp;одной волне!
                     </h2>
                     <picture class="promo__wave">
-                        <source srcset="images/promo/wave.svg" media="(min-width:1110px)">
-                        <source srcset="images/promo/wave-1024.svg" media="(min-width:824px)">
-                        <source srcset="images/promo/wave-768.svg" media="(min-width:540px)">
-                        <source srcset="images/promo/wave-320.svg" media="(max-width:539px)">
+                        <source srcset="images/promo/wave.svg" media="(min-width:1920px)">
+                        <source srcset="images/promo/wave-1024.svg" media="(min-width:1024px)">
+                        <source srcset="images/promo/wave-768.svg" media="(min-width:768px)">
+                        <source srcset="images/promo/wave-320.svg" media="(max-width:767px)">
                         <img class="promo__wave" src="images/promo/wave.svg" alt="Промо-фотография" aria-hidden="true">
                     </picture>
                     <p class="promo__text-top">
@@ -1706,17 +1727,21 @@
                     <picture class="about-us__background">
                         <source srcset="images/about-us/figures.png" media="(min-width:1920px)">
                         <source srcset="images/about-us/figures-1024.png" media="(min-width:1024px)">
-                        <source srcset="images/about-us/figures-768.png" media="(max-width:1023px)">
                         <img class="about-us__background" src="images/about-us/figures.png" alt="Фоновое изображение" aria-hidden="true">
                     </picture>
                 </div>
+            </div>
+            <figure class="about-us__background-mobile">
+                <img src="images/about-us/figures-768.png" alt="Фоновое изображение">
+            </figure>
+            <div class="content-container">
                 <ul class="about-us__feedback-list li-reset flex">
                     <li class="about-us__feedback-item">
                         <picture class="about-us__user-picture">
                             <source srcset="images/about-us/avatar-1.jpg" media="(min-width:1920px)">
                             <source srcset="images/about-us/avatar-1-1024.jpg" media="(min-width:1024px)">
-                            <source srcset="images/about-us/avatar-1.jpg" media="(min-width:780px)">
-                            <source srcset="images/about-us/avatar-1-320.jpg" media="(max-width:779px)">
+                            <source srcset="images/about-us/avatar-1.jpg" media="(min-width:768px)">
+                            <source srcset="images/about-us/avatar-1-320.jpg" media="(max-width:767px)">
                             <img class="about-us__user-picture" src="images/about-us/avatar-1.jpg"
                                  alt="Фотография пользователя" aria-hidden="true">
                         </picture>
@@ -1731,8 +1756,8 @@
                         <picture class="about-us__user-picture">
                             <source srcset="images/about-us/avatar-2.jpg" media="(min-width:1920px)">
                             <source srcset="images/about-us/avatar-2-1024.jpg" media="(min-width:1024px)">
-                            <source srcset="images/about-us/avatar-2.jpg" media="(min-width:780px)">
-                            <source srcset="images/about-us/avatar-2-320.jpg" media="(max-width:779px)">
+                            <source srcset="images/about-us/avatar-2.jpg" media="(min-width:768px)">
+                            <source srcset="images/about-us/avatar-2-320.jpg" media="(max-width:767px)">
                             <img class="about-us__user-picture" src="images/about-us/avatar-2.jpg"
                                  alt="Фотография пользователя" aria-hidden="true">
                         </picture>
@@ -1747,8 +1772,8 @@
                         <picture class="about-us__user-picture">
                             <source srcset="images/about-us/avatar-3.jpg" media="(min-width:1920px)">
                             <source srcset="images/about-us/avatar-3-1024.jpg" media="(min-width:1024px)">
-                            <source srcset="images/about-us/avatar-3.jpg" media="(min-width:780px)">
-                            <source srcset="images/about-us/avatar-3-320.jpg" media="(max-width:779px)">
+                            <source srcset="images/about-us/avatar-3.jpg" media="(min-width:768px)">
+                            <source srcset="images/about-us/avatar-3-320.jpg" media="(max-width:767px)">
                             <img class="about-us__user-picture" src="images/about-us/avatar-3.jpg"
                                  alt="Фотография пользователя" aria-hidden="true">
                         </picture>
@@ -1763,8 +1788,8 @@
                         <picture class="about-us__user-picture">
                             <source srcset="images/about-us/avatar-4.jpg" media="(min-width:1920px)">
                             <source srcset="images/about-us/avatar-4-1024.jpg" media="(min-width:1024px)">
-                            <source srcset="images/about-us/avatar-4.jpg" media="(min-width:780px)">
-                            <source srcset="images/about-us/avatar-4-320.jpg" media="(max-width:779px)">
+                            <source srcset="images/about-us/avatar-4.jpg" media="(min-width:768px)">
+                            <source srcset="images/about-us/avatar-4-320.jpg" media="(max-width:767px)">
                             <img class="about-us__user-picture" src="images/about-us/avatar-4.jpg"
                                  alt="Фотография пользователя" aria-hidden="true">
                         </picture>

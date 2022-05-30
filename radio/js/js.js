@@ -143,19 +143,17 @@ const choices = new Choices(element, {
 //---------------------------------Swiper-320-----------------------------------//
 
 const swiper = new Swiper('.swiper', {
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     loop: true,
+    loopedSlides: 5,
     spaceBetween: 15,
-// If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
+    focusableElements: 'button',
+    width: 1600,
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
 });
+
+
+
+
 
 });
