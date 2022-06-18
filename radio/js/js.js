@@ -92,7 +92,12 @@ const choices = new Choices(element, {
 
 //---------------------------------Validator-----------------------------------//
 
-    const validation = new JustValidate('#form');
+    const validation = new JustValidate('#form', {
+        errorLabelCssClass: 'about-us__form-invalid',
+        errorLabelStyle: {
+            color: '#FF6F6F',
+        }
+    });
 
     validation
         .addField('#name', [
@@ -113,7 +118,7 @@ const choices = new Choices(element, {
                 errorMessage: 'Ошибка',
 
             },
-        ]);
+        ])
 
 //---------------------------------Burger-menu-----------------------------------//
 
@@ -151,9 +156,5 @@ const swiper = new Swiper('.swiper', {
     width: 1600,
 
 });
-
-
-
-
 
 });
