@@ -2,22 +2,22 @@
 
 document.addEventListener('DOMContentLoaded', function(){
 
-    document.querySelector('#search__btn').addEventListener('click', function (){
-        document.querySelector('#search__form').classList.add('search__form-active')
+    document.querySelector('#search-btn').addEventListener('click', function (){
+        document.querySelector('#search-form').classList.add('search-form--active')
     });
 
     document.addEventListener("click", function (e) {
         let target = e.target;
-        let searchform = document.querySelector("#search__form");
+        let searchform = document.querySelector("#search-form");
         if (!target.closest(".header__search")) {
-            searchform.classList.remove("search__form-active");
+            searchform.classList.remove("search-form--active");
             searchform.querySelector(".search-bar").value = "";
         }
     });
 
 //---------------------------------Scroll to block-----------------------------------//
 
-    const anchors = document.querySelectorAll('.nav-top__list a[href*="#"]')
+    const anchors = document.querySelectorAll('.nav__list a[href*="#"]')
 
     for (let anchor of anchors) {
         anchor.addEventListener('click', function (e) {
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     document.querySelectorAll(".on-air__play-btn").forEach(item => {
         item.addEventListener("click", function () {
-            item.querySelector('.on-air__play-icon').classList.toggle('on-air__play-icon-disable');
-            item.querySelector('.on-air__stop-icon').classList.toggle('on-air__stop-icon-active');
+            item.querySelector('.on-air__play-icon').classList.toggle('on-air__play-icon--disable');
+            item.querySelector('.on-air__stop-icon').classList.toggle('on-air__stop-icon--active');
         })
     });
 
@@ -122,39 +122,28 @@ const choices = new Choices(element, {
 
 //---------------------------------Burger-menu-----------------------------------//
 
-    document.querySelector('#burger__btn-open').addEventListener('click', function (){
-        document.querySelector('.burger__nav').classList.toggle('burger__nav-active')
+    document.querySelector('#burger-btn-open').addEventListener('click', function (){
+        document.querySelector('.nav-burger').classList.toggle('nav-burger--active')
     });
 
-    document.querySelector('.burger__btn-close').addEventListener('click', function (){
-        document.querySelector('.burger__nav').classList.toggle('burger__nav-active')
+    document.querySelector('.burger-btn-close').addEventListener('click', function (){
+        document.querySelector('.nav-burger').classList.toggle('nav-burger--active')
     });
 
 //---------------------------------On-air-768-----------------------------------//
 
-    document.querySelector('.on-air__container-initialization').addEventListener('click', function (){
-        document.querySelector('.on-air__top-menu').classList.toggle('on-air__top-menu-active')
+    document.querySelector('.on-air-initialization').addEventListener('click', function (){
+        document.querySelector('.on-air-mobile').classList.toggle('on-air-mobile--active')
     });
 
 
 //---------------------------------On-air-320-----------------------------------//
 
-    document.querySelector('.on-air__burger-btn').addEventListener('click', function (){
-        document.querySelector('.on-air__burger-opened').classList.toggle('on-air__burger-opened-active')
-        document.querySelector('.on-air__burger-icon').classList.toggle('on-air__burger-icon-active')
-        document.querySelector('.header__bottom').classList.toggle('header__bottom-active')
+    document.querySelector('.on-air-burger__btn').addEventListener('click', function (){
+        document.querySelector('.on-air-burger__opened').classList.toggle('on-air-burger__opened--active')
+        document.querySelector('.on-air-burger__icon').classList.toggle('on-air-burger__icon--active')
+        document.querySelector('.header__bottom').classList.toggle('header__bottom--active')
     });
 
-//---------------------------------Swiper-320-----------------------------------//
-
-const swiper = new Swiper('.swiper', {
-    slidesPerView: 'auto',
-    loop: true,
-    loopedSlides: 5,
-    spaceBetween: 15,
-    focusableElements: 'button',
-    width: 1600,
-
-});
 
 });
