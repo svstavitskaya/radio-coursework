@@ -45,17 +45,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
     $( function() {
         $( ".accordion" ).accordion({
+            animate: 800,
             heightStyle: "content",
             active: false,
             collapsible: true,
         });
-    });
-
-//------Guest-info-------//
-
-    document.querySelector('#guest-6').addEventListener('click', function (){
-        document.querySelector('#guest__info-6').classList.toggle('guest__info-active')
-        document.querySelector('#plug').classList.toggle('guest__plug-disable')
 
     });
 
@@ -146,4 +140,15 @@ const choices = new Choices(element, {
     });
 
 
+});
+
+
+//---------------------------------Guest-active---------------------------------------//
+
+$(function () {
+    document.querySelector('.guest__item-wrapper').addEventListener('click', function () {
+        document.querySelector('#guest__info-6').classList.toggle('guest__info-active')
+        document.querySelector('#guest-6').classList.toggle('guest__expanded-item--active')
+        document.querySelector('#plug').classList.toggle('guest__plug-disable')
+    });
 });
