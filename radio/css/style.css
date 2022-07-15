@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *::before,
@@ -118,7 +119,6 @@ img {
     font-family: Muller, sans-serif;
     font-size: 48px;
     font-weight: 400;
-    line-height: 1;
 }
 
 /*---------------Desktop general-------------------*/

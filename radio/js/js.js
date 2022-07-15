@@ -152,3 +152,52 @@ $(function () {
         document.querySelector('#plug').classList.toggle('guest__plug-disable')
     });
 });
+
+//---------------------------------Guest-scroll---------------------------------------//
+
+if (window.matchMedia("(max-width: 767px)").matches) {
+
+            const guestscroll = document.querySelectorAll('.guest__expanded-item a[href*="#"]')
+
+            for (let guestscroll of guestscroll) {
+                guestscroll.addEventListener('click', function (e) {
+                    e.preventDefault()
+
+                    const itemID = guestscroll.getAttribute('href').substr(1)
+
+                    document.getElementById(itemID).scrollIntoView({
+                        behavior: 'smooth',
+                        speed: 9000,
+                        block: 'start'
+                    })
+                })
+            }
+    };
+
+//--------------Modal-enter----------------------//
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    document.querySelector('#enter-btn').addEventListener('click', function () {
+        document.querySelector('#modal-enter').classList.add('modal--active')
+    });
+
+    document.querySelector('#enter-btn--mobile').addEventListener('click', function () {
+        document.querySelector('#modal-enter').classList.add('modal--active')
+    });
+
+    document.querySelector('.modal-header-btn').addEventListener('click', function () {
+        document.querySelector('#modal-enter').classList.remove('modal--active')
+    });
+
+//--------------Modal-promo----------------------//
+
+    document.querySelector('#modal-promo-btn').addEventListener('click', function () {
+        document.querySelector('#modal-promo').classList.add('modal--active')
+    });
+
+    document.querySelector('.modal-header-btn--promo').addEventListener('click', function () {
+        document.querySelector('#modal-promo').classList.remove('modal--active')
+    });
+
+});

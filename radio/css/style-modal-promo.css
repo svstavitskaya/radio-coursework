@@ -1,0 +1,63 @@
+.modal-header-title--promo::before {
+    content: url("../images/promo/modal-title-icon.svg");
+    top: 0;
+    left: 0;
+    padding-right: 16px;
+}
+
+.modal-header-link--promo {
+    color: var(--promo-color);
+}
+
+.modal__product {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-list {
+    margin-right: 0;
+    padding-bottom: var(--gap);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow: scroll;
+}
+
+.product-list::-webkit-scrollbar {
+    display: none;
+}
+
+.product-item:not(:last-child) {
+    margin-right: 16px;
+}
+
+.modal__booked {
+    display:block;
+    margin-bottom: 16px;
+    text-align: left;
+    font-family: 'Muller', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.modal__order-number {
+    display:block;
+    text-align: left;
+    font-family: 'Muller', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
