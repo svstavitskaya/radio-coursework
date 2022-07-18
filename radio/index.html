@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-modal-enter.css">
-    <link rel="stylesheet" href="css/style-modal-promo.css">
+    <link rel="stylesheet" href="css/style-modal.css">
 </head>
 <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 <body id="body">
@@ -1806,7 +1805,7 @@
                     </li>
                 </ul>
                 <textarea class="about-us__comment" name="textarea" placeholder="Что скажете?"></textarea>
-                <form action="#" id="form" autocomplete="off">
+                <form action="#" id="form" autocomplete="off" method="post" enctype="multipart/form-data">
                     <div class="about-us__form">
                         <div class="form">
                             <input class="form__input form-control about-us__form-invalid" type="text" name="name" id="name"
@@ -1932,7 +1931,7 @@
 <script src="js/choices.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-<script src="js/modal-enter.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/js.js"></script>
 </body>
 </html>

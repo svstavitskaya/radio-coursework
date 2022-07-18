@@ -83,13 +83,29 @@ const choices = new Choices(element, {
         document.querySelectorAll('.podcast__item-overflow').forEach(el => el.classList.toggle('podcast__item-active'))
        });
 
-
 //---------------------------------Validator-----------------------------------//
 
     const validation = new JustValidate('#form', {
         errorLabelCssClass: 'about-us__form-invalid',
         errorLabelStyle: {
             color: '#FF6F6F',
+            submitHandler: function(thisForm) {
+                let formData = new FormData(thisForm);
+
+                let xhr = new XMLHttpRequest();
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            console.log('Sent')
+                        }
+                    }
+                }
+                xhr.open('POST', 'mail.php', true);
+                xhr.send(formData);
+
+                thisForm.reset();
+            }
         }
     });
 
@@ -201,3 +217,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+
