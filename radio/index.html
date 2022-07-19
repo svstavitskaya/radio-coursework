@@ -8,6 +8,7 @@
     <link rel="icon" href="images/favicon.svg" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-modal.css">
@@ -1655,14 +1656,38 @@
         </section>
         <section class="section promo" id="promo">
             <div class="content-container promo__container flex">
-                <picture class="promo__picture">
-                    <source srcset="images/promo/radio-background-retina.png 2x" media="(min-width:1920px)">
-                    <source srcset="images/promo/radio-background.png" media="(min-width:1920px)">
-                    <source srcset="images/promo/radio-background-1024.png" media="(min-width:1024px)">
-                    <source srcset="images/promo/radio-background-768.png" media="(min-width:768px)">
-                    <source srcset="images/promo/radio-background-320.png" media="(max-width:767px)">
-                    <img class="promo__picture" src="images/promo/radio-background.png" alt="Промо-фотография" aria-hidden="true">
-                </picture>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <picture class="promo__picture">
+                                <source srcset="images/promo/radio-background.png" media="(min-width:1920px)">
+                                <source srcset="images/promo/radio-background-1024.png" media="(min-width:1024px)">
+                                <source srcset="images/promo/radio-background-768.png" media="(min-width:768px)">
+                                <source srcset="images/promo/radio-background-320.png" media="(max-width:767px)">
+                                <img class="promo__picture" src="images/promo/radio-background.png" alt="Промо-фотография" aria-hidden="true">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="promo__picture">
+                                <source srcset="images/promo/radio-background-blue.png" media="(min-width:1920px)">
+                                <source srcset="images/promo/radio-background-blue-1024.png" media="(min-width:1024px)">
+                                <source srcset="images/promo/radio-background-blue-768.png" media="(min-width:768px)">
+                                <source srcset="images/promo/radio-background-blue-320.png" media="(max-width:767px)">
+                                <img class="promo__picture" src="images/promo/radio-background-blue.png" alt="Промо-фотография" aria-hidden="true">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture class="promo__picture">
+                                <source srcset="images/promo/radio-background-green.png" media="(min-width:1920px)">
+                                <source srcset="images/promo/radio-background-green-1024.png" media="(min-width:1024px)">
+                                <source srcset="images/promo/radio-background-green-768.png" media="(min-width:768px)">
+                                <source srcset="images/promo/radio-background-green-320.png" media="(max-width:767px)">
+                                <img class="promo__picture" src="images/promo/radio-background-green.png" alt="Промо-фотография" aria-hidden="true">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
                 <div class="promo__info">
                     <h2 class="promo__heading heading">
                         Будь с&nbsp;нами на&nbsp;одной волне!
@@ -1931,6 +1956,7 @@
 <script src="js/choices.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/js.js"></script>
 </body>

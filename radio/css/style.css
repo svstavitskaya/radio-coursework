@@ -1915,11 +1915,67 @@ img {
     color: var(--promo-color);
 }
 
+.swiper {
+    margin-right: var(--gap);
+    flex-shrink: 0;
+    width: 640px;
+    height: 100%;
+}
+
 .promo__picture {
-    margin-right: 15px;
     display: block;
     -o-object-fit: contain;
     object-fit: contain;
+}
+
+.swiper-wrapper {
+    flex-shrink: 0;
+    margin-bottom: 40px;
+}
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+}
+
+.swiper-pagination-bullet:not(:last-child) {
+    margin-right: 35px;
+}
+
+.swiper-pagination-bullet:nth-child(1) {
+    background-color: #874158;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet:nth-child(2) {
+    background-color: #006E7B;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet:nth-child(3) {
+    background-color: #1D6C4E;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active:nth-child(1) {
+    background-image: url("../images/promo/pagination-red.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+.swiper-pagination-bullet-active:nth-child(2) {
+    background-image: url("../images/promo/pagination-blue.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+.swiper-pagination-bullet-active:nth-child(3) {
+    background-image: url("../images/promo/pagination-green.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
 }
 
 .promo__wave {
@@ -1927,7 +1983,7 @@ img {
 }
 
 .promo__info {
-    width: 40.1%;
+    width: calc(100% - 655px);
 }
 
 .promo__text-top::before {
@@ -2639,8 +2695,12 @@ img {
         align-items: center;
     }
 
+    .swiper {
+        width: 397px;
+    }
+
     .promo__info {
-        width: 48.5%;
+        width: calc(100% - 397px - var(--gap));
     }
 
     .promo__text-top::before {
@@ -3072,12 +3132,16 @@ img {
     }
 
     .promo__picture {
-        margin-right: 0;
         margin-bottom: 25px;
     }
 
     .promo__heading {
         width: 80%;
+    }
+
+    .swiper {
+        margin-right: 0;
+        width: 540px;
     }
 
     .promo__info {
@@ -3825,7 +3889,11 @@ img {
 
     .promo__picture {
         margin-bottom: 14px;
+    }
+
+    .swiper {
         margin-right: 0;
+        width: 256px;
     }
 
     .promo__heading {

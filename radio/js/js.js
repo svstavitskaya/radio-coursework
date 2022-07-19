@@ -219,3 +219,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//--------------Swiper-promo----------------------//
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    loop: true,
+    speed: 400,
+    simulateTouch: true,
+    touchRatio: 1,
+    touchAngle: 45,
+    grabCursor: true,
+    keyboard: {
+        enable: true,
+    },
+    autoplay: {
+        delay: 2000,
+        stopOnLastSlide: true,
+
+    },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
+
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+
+    }
+
+});
