@@ -1,7 +1,7 @@
 //-------------------------------Modal-Enter-----------------------//
 
 const validation = new JustValidate('#form--modal', {
-    errorLabelCssClass: 'modal-form--invalid',
+    errorLabelCssClass: 'form-invalid',
     errorLabelStyle: {
         color: '#FF6F6F',
     }

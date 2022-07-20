@@ -1380,7 +1380,6 @@ img {
 
 .guest__expanded-item {
     cursor: pointer;
-    display: inline-block;
     break-inside: avoid-column;
     margin-bottom: 14px;
     font-family: Muller, sans-serif;
@@ -2156,6 +2155,7 @@ img {
 }
 
 .about-us__comment {
+    box-sizing: border-box;
     margin-bottom: 26px;
     padding-top: 28px;
     padding-left: 32px;
@@ -2195,19 +2195,26 @@ img {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: var(--gap);
+    width: 82%;
 }
 
 .form {
+    display: block;
     position: relative;
-    width: 40.1%;
+    width: calc(50% - var(--gap));
+}
+
+.form:first-child {
+    margin-right: var(--gap);
 }
 
 .form__input {
+    box-sizing: border-box;
     cursor: pointer;
     padding-left: 32px;
     border: 1px solid #FFF;
     border-radius: 40px;
-    width: 92%;
+    width: 100%;
     height: 67px;
     font-family: Muller, sans-serif;
     font-size: 20px;
@@ -2218,10 +2225,6 @@ img {
     -webkit-transition: border-color, background-color, color .4s cubic-bezier(1, 0, 0, 1);;
     -o-transition: border-color, background-color, color .4s cubic-bezier(1, 0, 0, 1);
     transition: border-color, background-color, color .4s cubic-bezier(1, 0, 0, 1);
-}
-
-.form:first-child {
-    margin-right: 30px;
 }
 
 .just-validate-error-label {
@@ -2567,10 +2570,6 @@ img {
         padding-top: 30px;
     }
 
-    .guest__expanded-item {
-        letter-spacing: -0.02ch;
-    }
-
     .guest__plug {
         height: 159px;
     }
@@ -2736,18 +2735,10 @@ img {
     }
 
     .about-us__comment {
-        width: 96%;
+        width: 100%;
     }
 
-    .form {
-        width: 44%;
-    }
-
-    .form:first-child {
-        margin-right: 62px;
-    }
-
-    .form__input  {
+    .about-us__form {
         width: 100%;
     }
 
@@ -3141,7 +3132,11 @@ img {
 
     .swiper {
         margin-right: 0;
-        width: 540px;
+        width: 100%;
+    }
+
+    .promo__picture {
+        margin: 0 auto;
     }
 
     .promo__info {
@@ -3179,15 +3174,10 @@ img {
         width: 100%;
     }
 
-    .about-us__comment {
-        width: 93%;
-    }
-
-    .form {
-        width: 93%;
-    }
-
     .about-us__form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -3893,7 +3883,6 @@ img {
 
     .swiper {
         margin-right: 0;
-        width: 256px;
     }
 
     .promo__heading {
@@ -3984,14 +3973,9 @@ img {
         height: 47px;
     }
 
-    .form {
-        width: 89%;
-    }
-
-    .about-us__comment {
+   .about-us__comment {
         padding-top: 14px;
         padding-left: 21px;
-        width: 90%;
         height: 127px;
     }
 

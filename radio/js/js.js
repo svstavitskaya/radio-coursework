@@ -86,7 +86,7 @@ const choices = new Choices(element, {
 //---------------------------------Validator-----------------------------------//
 
     const validation = new JustValidate('#form', {
-        errorLabelCssClass: 'about-us__form-invalid',
+        errorLabelCssClass: 'form-invalid',
         errorLabelStyle: {
             color: '#FF6F6F',
             submitHandler: function(thisForm) {
@@ -220,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //--------------Swiper-promo----------------------//
+
 const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     loop: true,
