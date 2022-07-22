@@ -17,12 +17,14 @@ validation
         {
             rule: 'minLength',
             value: 3,
+            errorMessage: 'Логин должен состоять минимум из 3 символов',
         },
     ])
 
     .addField('#password', [
         {
             rule: 'password',
+            errorMessage:'Пароль должен состоять минимум из 8 символов',
         },
     ]);
 

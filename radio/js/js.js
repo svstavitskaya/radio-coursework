@@ -119,6 +119,7 @@ const choices = new Choices(element, {
             {
                 rule: 'minLength',
                 value: 3,
+                errorMessage: 'Логин должен состоять минимум из 3 символов',
             },
         ])
 
