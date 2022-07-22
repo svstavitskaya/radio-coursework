@@ -109,7 +109,7 @@
     width: 100%;
 }
 
-.form {
+.form-group {
     width: 100%;
     margin-bottom: 30px;
 }
@@ -183,13 +183,7 @@
     align-items: flex-start;
 }
 
-.social-item {
-    -webkit-transition: fill .4s cubic-bezier(1, 0, 0, 1);
-    -o-transition: fill .4s cubic-bezier(1, 0, 0, 1);
-    transition: fill .4s cubic-bezier(1, 0, 0, 1);
-}
-
-.social-item:not(:last-child) {
+.social-item--modal:not(:last-child) {
     margin-right: 40px;
 }
 

@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-modal.css">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 </head>
-<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 <body id="body">
     <header class="header">
         <div class="header__wrapper">
@@ -196,8 +196,7 @@
                                 </svg>
                             </button>
                             <form class="search-form" id="search-form" role="search" action="/">
-                                <input class="search-bar" type="search" name="search" placeholder="Поиск по&nbsp;сайту"
-                                        aria-labelledby="Поиск по&nbsp;сайту">
+                                <input class="search-bar" type="search" name="search" placeholder="Поиск по&nbsp;сайту" aria-label="Поиск по&nbsp;сайту">
                             </form>
                         </div>
                         <a class="header__enter-btn btn-reset" href="#" id="enter-btn" role="button" aria-label="Вход">
@@ -242,7 +241,7 @@
                 <div class="modal-links">
                     <h2 class="modal-links__header">Войти с помощью:</h2>
                     <ul class="modal-links__list li-reset">
-                        <li class="social-item">
+                        <li class="social-item social-item--modal">
                             <a href="#" class="social-item-link link-fb">
                                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M23.3002 33.6667V20.7667H27.6205L28.2668 15.7519H23.3002V12.5519C23.3002 11.1 23.7039 10.1093 25.7853 10.1093H28.4409V5.62408C27.1553 5.48769 25.8633 5.42154 24.5705 5.42594C20.7428 5.42594 18.1224 7.76297 18.1224 12.0556V15.7519H13.7928V20.7667H18.1224V33.6667H2.18535C1.69421 33.6667 1.22318 33.4716 0.875891 33.1243C0.528601 32.777 0.333496 32.306 0.333496 31.8148V2.1852C0.333496 1.69405 0.528601 1.22303 0.875891 0.875738C1.22318 0.528449 1.69421 0.333344 2.18535 0.333344H31.815C32.3061 0.333344 32.7771 0.528449 33.1244 0.875738C33.4717 1.22303 33.6668 1.69405 33.6668 2.1852V31.8148C33.6668 32.306 33.4717 32.777 33.1244 33.1243C32.7771 33.4716 32.3061 33.6667 31.815 33.6667H23.3002V33.6667Z" fill="#A1A6B4"/>
@@ -355,9 +354,7 @@
                                 <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white"/>
                                 <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white"/>
                             </svg>
-                            <h3 class="on-air-burger__heading">
-                                Что в&nbsp;эфире?
-                            </h3>
+                            <span class="on-air-burger__heading">Что в&nbsp;эфире?</span>
                         </button>
                         <div class="on-air-burger__opened">
                             <div class="on-air__container flex">
@@ -1011,10 +1008,10 @@
                                 Автор:
                             </h3>
                             <select class="broadcast__select" id="custom-select" name="select" aria-label="Выбор автора">
-                                <option value="" selected tabindex="0" aria-label="Дмитрий Гутенберг">Дмитрий Гутенберг</option>
-                                <option value="Татьяна Флеганова" tabindex="0" aria-label="Татьяна Флеганова">Татьяна Флеганова</option>
-                                <option value="Анна Васильева" tabindex="0" aria-label="Анна Васильева">Анна Васильева</option>
-                                <option value="Пётр Дмитриевский" tabindex="0" aria-label="Пётр Дмитриевский">Пётр Дмитриевский</option>
+                                <option value="" selected tabindex="0">Дмитрий Гутенберг</option>
+                                <option value="Татьяна Флеганова" tabindex="0">Татьяна Флеганова</option>
+                                <option value="Анна Васильева" tabindex="0">Анна Васильева</option>
+                                <option value="Пётр Дмитриевский" tabindex="0">Пётр Дмитриевский</option>
                             </select>
                         </div>
                     </div>
@@ -1154,7 +1151,6 @@
                         В архив попадают все передачи, которые вы пропустили!<span class="archive-text-special">Enjoy :)</span>
                     </p>
                 </div>
-            </div>
             </div>
         </section>
         <section class="section guest" id="guest">
@@ -1859,7 +1855,7 @@
             <div class="footer__top flex">
                 <div class="footer__social-info">
                     <a class="footer__logo" href="#">
-                        <img class="logo-image" src="images/footer/logo.png" alt="W-Wave">
+                        <img class="logo-image logo-image--footer" src="images/footer/logo.png" alt="W-Wave">
                     </a>
                     <ul class="footer__social-list social-list li-reset flex">
                         <li class="footer__social-item social-item">
