@@ -688,7 +688,7 @@ img {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    border-bottom: 1px solid var(--text-grey);
+    border-bottom: 1px solid var(--background-color-light);
 }
 
 .podcast__wrapper {
@@ -1081,6 +1081,10 @@ img {
     border-color: transparent;
 }
 
+.is-selected {
+    display: none;
+}
+
 .choices__inner:hover:not(:focus-visible) {
     background-color: rgba(230, 232, 236, 0.4);
 }
@@ -1135,7 +1139,7 @@ img {
     margin-top: 15px;
     margin-bottom: 18px;
     padding: 8px 46px;
-    border: 2px solid var(--text-dark);
+    border: 2px solid #121723;
     border-radius: 77px;
     font-size: 16px;
     color: var(--text-dark);
@@ -1473,10 +1477,10 @@ img {
     background-color: rgba(170, 157, 250, 0.3);
 }
 
-/*.ui-state-active .guest__item-wrapper {*/
-/*    border-top-color: var(--primiry-light);*/
-/*    border-bottom-color: var(--primiry-light);*/
-/*}*/
+.ui-state-active .guest__item-wrapper {
+    border-top-color: var(--primiry-light);
+    border-bottom-color: var(--primiry-light);
+}
 
 .ui-state-focus .guest__icon {
     background-image: url("../images/guests/arrow-btn-active.svg");
@@ -1524,6 +1528,7 @@ img {
 
 .guest__info-plug {
     width: 31.5%;
+    overflow-x: hidden;
 }
 
 .guest__plug {
@@ -1573,7 +1578,7 @@ img {
     font-size: 20px;
     font-weight: 500;
     line-height: 1;
-    color: var(--text-grey);
+    color: #FFF;
 }
 
 .guest__person-info {
@@ -2335,7 +2340,7 @@ img {
     margin-bottom: 18px;
 }
 
-.footer__social-item:not(:last-child) {
+.social-item--footer:not(:last-child) {
     margin-right: 20px;
 }
 
@@ -3786,11 +3791,12 @@ img {
         display: flex;
         flex-direction: column-reverse;
         align-items: flex-start;
-        margin-left: 32px;
-        width: 60%;
+        justify-content: center;
+        width: 50%;
         height: 100%;
         background-image: url("../images/broadcast/microphone-320.png");
         background-repeat: no-repeat;
+        background-size: contain;
     }
 
     .archive-text {
@@ -4061,9 +4067,9 @@ img {
         background-image: url("../images/promo/wave-320.svg");
         background-repeat: no-repeat;
         background-position: left;
-        background-size: cover;
+        background-size: contain;
         width: 100%;
-        height: 10px;
+        height: 12px;
     }
 
     .promo__text-top {
