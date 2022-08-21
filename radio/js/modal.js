@@ -1,3 +1,45 @@
+//--------------Modal-enter----------------------//
+
+let modalEnter = document.querySelector('#enter-btn');
+let modalEnterMobile = document.querySelector( '#enter-btn--mobile');
+let modalClose = document.querySelector('#modal-close');
+
+modalEnter.addEventListener('click', function () {
+    document.querySelector('#modal-enter').classList.add('modal--active');
+    document.querySelector('.modal-container').classList.add('modal-container--active')
+    document.body.classList.add('stop-scroll');
+});
+
+modalEnterMobile.addEventListener('click', function () {
+    document.querySelector('#modal-enter').classList.add('modal--active');
+    document.querySelector('.modal-container').classList.add('modal-container--active')
+});
+
+modalClose.addEventListener('click', function () {
+    document.querySelector('#modal-enter').classList.remove('modal--active');
+    document.querySelector('.modal-container').classList.remove('modal-container--active')
+    document.body.classList.remove('stop-scroll');
+});
+
+
+//--------------Modal-promo----------------------//
+
+let modalPromo = document.querySelector('#modal-promo-btn');
+let modalPromoClose = document.querySelector('.modal-header-btn--promo')
+
+modalPromo.addEventListener('click', function () {
+    document.querySelector('#modal-promo').classList.add('modal--active');
+    document.querySelector('.modal-container-promo').classList.add('modal-container--active')
+    document.body.classList.add('stop-scroll');
+});
+
+modalPromoClose.addEventListener('click', function () {
+    document.querySelector('#modal-promo').classList.remove('modal--active');
+    document.querySelector('.modal-container-promo').classList.remove('modal-container--active')
+    document.body.classList.remove('stop-scroll');
+});
+
+
 //-------------------------------Modal-Enter-----------------------//
 
 const validation = new JustValidate('#form--modal', {
@@ -22,6 +64,11 @@ validation
     ])
 
     .addField('#password', [
+        {
+            rule: 'required',
+            errorMessage: 'Ошибка',
+        },
+
         {
             rule: 'password',
             errorMessage:'Пароль должен состоять минимум из 8 символов',

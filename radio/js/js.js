@@ -79,7 +79,8 @@ const choices = new Choices(element, {
 
 //-------More-button---------//
 
-    document.querySelector('.podcast__btn').addEventListener('click', function (){
+    document.querySelector('.podcast__btn').addEventListener('click',
+        function (){
         document.querySelectorAll('.podcast__item-overflow').forEach(el => el.classList.toggle('podcast__item-active'))
        });
 
@@ -131,16 +132,6 @@ const choices = new Choices(element, {
             },
         ])
 
-//---------------------------------Burger-menu-----------------------------------//
-
-    document.querySelector('#burger-btn-open').addEventListener('click', function (){
-        document.querySelector('.nav-burger').classList.toggle('nav-burger--active')
-    });
-
-    document.querySelector('.burger-btn-close').addEventListener('click', function (){
-        document.querySelector('.nav-burger').classList.toggle('nav-burger--active')
-    });
-
 //---------------------------------On-air-768-----------------------------------//
 
     document.querySelector('.on-air-initialization').addEventListener('click', function (){
@@ -150,75 +141,15 @@ const choices = new Choices(element, {
 
 //---------------------------------On-air-320-----------------------------------//
 
-    document.querySelector('.on-air-burger__btn').addEventListener('click', function (){
-        document.querySelector('.on-air-burger__opened').classList.toggle('on-air-burger__opened--active')
-        document.querySelector('.on-air-burger__icon').classList.toggle('on-air-burger__icon--active')
-        document.querySelector('.header__bottom').classList.toggle('header__bottom--active')
-    });
+    let airBurger = document.querySelector('.on-air-burger__btn');
 
-
-});
-
-
-//---------------------------------Guest-active---------------------------------------//
-
-$(function () {
-    document.querySelector('.guest__item-wrapper').addEventListener('click', function () {
-        document.querySelector('#guest__info-6').classList.toggle('guest__info-active')
-        document.querySelector('#guest-6').classList.toggle('guest__expanded-item--active')
-        document.querySelector('#plug').classList.toggle('guest__plug-disable')
-    });
-});
-
-//---------------------------------Guest-scroll---------------------------------------//
-
-if (window.matchMedia("(max-width: 767px)").matches) {
-
-            const guestscroll = document.querySelectorAll('.guest__expanded-item a[href*="#"]')
-
-            for (let guestscroll of guestscroll) {
-                guestscroll.addEventListener('click', function (e) {
-                    e.preventDefault()
-
-                    const itemID = guestscroll.getAttribute('href').substr(1)
-
-                    document.getElementById(itemID).scrollIntoView({
-                        behavior: 'smooth',
-                        speed: 9000,
-                        block: 'start'
-                    })
-                })
-            }
-    };
-
-//--------------Modal-enter----------------------//
-
-document.addEventListener('DOMContentLoaded', function() {
-
-    document.querySelector('#enter-btn').addEventListener('click', function () {
-        document.querySelector('#modal-enter').classList.add('modal--active')
-    });
-
-    document.querySelector('#enter-btn--mobile').addEventListener('click', function () {
-        document.querySelector('#modal-enter').classList.add('modal--active')
-    });
-
-    document.querySelector('.modal-header-btn').addEventListener('click', function () {
-        document.querySelector('#modal-enter').classList.remove('modal--active')
-    });
-
-//--------------Modal-promo----------------------//
-
-    document.querySelector('#modal-promo-btn').addEventListener('click', function () {
-        document.querySelector('#modal-promo').classList.add('modal--active')
-    });
-
-    document.querySelector('.modal-header-btn--promo').addEventListener('click', function () {
-        document.querySelector('#modal-promo').classList.remove('modal--active')
+    airBurger.addEventListener('click', function () {
+        document.querySelector('.on-air-burger__opened').classList.toggle('on-air-burger__opened--active');
+        document.querySelector('.on-air__burger-icon').classList.toggle('on-air-burger__icon--active');
+        document.querySelector('.header__bottom').classList.toggle('header__bottom--active');
     });
 
 });
-
 
 //--------------Swiper-promo----------------------//
 
@@ -252,3 +183,4 @@ const swiper = new Swiper('.swiper', {
     }
 
 });
+

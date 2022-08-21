@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W-WAVE</title>
     <link rel="icon" href="images/favicon.svg" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/normalize.css">
@@ -104,22 +103,18 @@
                         </ul>
                     </nav>
                     <div class="top-menu-burger">
-                        <div class="burger-btn-open" id="burger-btn-open" role="button" aria-label="Открыть меню">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="3" rx="1.5" fill="#6D31EE"/>
-                                <rect y="21" width="24" height="3" rx="1.5" fill="#6D31EE"/>
-                                <rect y="11" width="24" height="3" rx="1.5" fill="#6D31EE"/>
-                            </svg>
-                        </div>
+                        <button class="burger-btn-open btn-reset" id="burger-btn-open" aria-label="Открыть меню">
+                            <span class="burger-btn-line"></span>
+                            <span class="burger-btn-line"></span>
+                            <span class="burger-btn-line"></span>
+                        </button>
                         <nav class=" nav nav-burger">
                             <div class="burger-top">
                                 <div class="content-container burger-top__container">
-                                    <div class="burger-btn-close" role="button" aria-label="Закрыть меню">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="4.5752" y="2.95406" width="24" height="3" rx="1.5" transform="rotate(45 4.5752 2.95406)" fill="#6D31EE"/>
-                                            <rect x="21.5459" y="5.07538" width="24" height="3" rx="1.5" transform="rotate(135 21.5459 5.07538)" fill="#6D31EE"/>
-                                        </svg>
-                                    </div>
+                                    <button class="burger-btn-close btn-reset" aria-label="Закрыть меню">
+                                        <span class="burger-btn-line burger-btn-line--close"></span>
+                                        <span class="burger-btn-line burger-btn-line--close"></span>
+                                    </button>
                                     <ul class="nav__list nav__list--burger li-reset" role="menubar">
                                         <li class="nav__item">
                                             <a class="nav__item-link" href="#podcast" role="menuitem">
@@ -348,16 +343,15 @@
                         </div>
                     </div>
                     <div class="on-air on-air-burger">
-                        <button class="on-air-burger__btn btn-reset" aria-label="Играть">
-                            <svg class="on-air__burger-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE"/>
-                                <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white"/>
-                                <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white"/>
-                            </svg>
-                            <span class="on-air-burger__heading">Что в&nbsp;эфире?</span>
-                        </button>
+                        <div class="on-air-burger__btn" role="button" aria-label="Играть">
+                            <div class="on-air__burger-icon">
+                                <span class="burger-icon-horizontal"></span>
+                                <span class="burger-icon-vertical"></span>
+                            </div>
+                            <h4 class="on-air-burger__heading">Что в&nbsp;эфире?</h4>
+                        </div>
                         <div class="on-air-burger__opened">
-                            <div class="on-air__container flex">
+                            <div class="on-air__container">
                                 <button class="on-air__play-btn btn-reset" aria-label="Играть/стоп">
                                     <svg class="on-air__play-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
@@ -377,7 +371,7 @@
                                     </h4>
                                 </div>
                             </div>
-                            <div class="on-air__container flex">
+                            <div class="on-air__container">
                                 <button class="on-air__play-btn btn-reset" aria-label="Играть/стоп">
                                     <svg class="on-air__play-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
@@ -424,11 +418,11 @@
                         </h1>
                     </div>
                     <p class="hero__text">
-                        Привет, на&nbsp;связи W-Wave! Раньше мы&nbsp;были <a href="#" class="hero__text-special" tabindex="0">изданием</a>,
+                        Привет, на&nbsp;связи W-Wave! Раньше мы&nbsp;были <a href="#" class="hero__text-special">изданием</a>,
                         а&nbsp;теперь пробуем себя в&nbsp;разговорном жанре. Говорим о&nbsp;музыке, политике, истории, науке и&nbsp;культуре.
                         Здесь, помимо прямого эфира&nbsp;&mdash; архив передач и&nbsp;многое другое :)
                     </p>
-                    <a class="hero__btn btn-reset" href="#" aria-label="Слушать эфир" tabindex="0">
+                    <a class="hero__btn btn-reset" href="#" aria-label="Слушать эфир">
                         Слушать эфир
                     </a>
                 </div>
@@ -639,8 +633,12 @@
                         </li>
                         <li class="podcast__item flex">
                             <div class="podcast__picture">
-                                <img class="podcast__image" src="images/podcast/podcast-5.jpg" alt="Изображение подкаста"
-                                     aria-hidden="true">
+                                <picture class="podcast__image">
+                                    <source srcset="images/podcast/podcast-5.jpg" media="(min-width:768px)">
+                                    <source srcset="images/podcast/podcast-5-320.jpg" media="(max-width:767px)">
+                                    <img class="podcast__image" src="images/podcast/podcast-5.jpg"
+                                        alt="Изображение подкаста" aria-hidden="true">
+                                </picture>
                                 <time class="date" datetime="06-02">2&nbsp;июня</time>
                             </div>
                             <div class="podcast__info">
@@ -683,8 +681,12 @@
                         </li>
                         <li class="podcast__item flex">
                             <div class="podcast__picture">
-                                <img class="podcast__image" src="images/podcast/podcast-6.jpg" alt="Изображение подкаста"
-                                     aria-hidden="true">
+                                <picture class="podcast__image">
+                                    <source srcset="images/podcast/podcast-6.jpg" media="(min-width:768px)">
+                                    <source srcset="images/podcast/podcast-6-320.jpg" media="(max-width:767px)">
+                                    <img class="podcast__image" src="images/podcast/podcast-6.jpg"
+                                     alt="Изображение подкаста" aria-hidden="true">
+                                </picture>
                                 <time class="date" datetime="05-28">28&nbsp;мая</time>
                             </div>
                             <div class="podcast__info">
@@ -727,8 +729,12 @@
                         </li>
                         <li class="podcast__item flex">
                             <div class="podcast__picture">
-                                <img class="podcast__image" src="images/podcast/podcast-7.jpg" alt="Изображение подкаста"
-                                     aria-hidden="true">
+                                <picture class="podcast__image">
+                                    <source srcset="images/podcast/podcast-7.jpg" media="(min-width:768px)">
+                                    <source srcset="images/podcast/podcast-7-320.jpg" media="(max-width:767px)">
+                                    <img class="podcast__image" src="images/podcast/podcast-7.jpg"
+                                        alt="Изображение подкаста" aria-hidden="true">
+                                </picture>
                                 <time class="date" datetime="05-22">22&nbsp;мая</time>
                             </div>
                             <div class="podcast__info">
@@ -771,8 +777,12 @@
                         </li>
                         <li class="podcast__item flex">
                             <div class="podcast__picture">
-                                <img class="podcast__image" src="images/podcast/podcast-8.jpg" alt="Изображение подкаста"
-                                     aria-hidden="true">
+                                <picture class="podcast__image">
+                                    <source srcset="images/podcast/podcast-8.jpg" media="(min-width:768px)">
+                                    <source srcset="images/podcast/podcast-8-320.jpg" media="(max-width:767px)">
+                                    <img class="podcast__image" src="images/podcast/podcast-8.jpg"
+                                        alt="Изображение подкаста" aria-hidden="true">
+                                </picture>
                                 <time class="date" datetime="05-18">18&nbsp;мая</time>
                             </div>
                             <div class="podcast__info">
@@ -813,10 +823,14 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="podcast__item podcast__item-overflow animate__animated animate__slideInDown">
+                        <li class="podcast__item flex">
                             <div class="podcast__picture">
-                                <img class="podcast__image" src="images/podcast/podcast-9.jpg" alt="Изображение подкаста"
-                                     aria-hidden="true">
+                                <picture class="podcast__image">
+                                    <source srcset="images/podcast/podcast-9.jpg" media="(min-width:768px)">
+                                    <source srcset="images/podcast/podcast-9-320.jpg" media="(max-width:767px)">
+                                    <img class="podcast__image" src="images/podcast/podcast-9.jpg"
+                                         alt="Изображение подкаста" aria-hidden="true">
+                                </picture>
                                 <time class="date" datetime="05-18">18&nbsp;мая</time>
                             </div>
                             <div class="podcast__info">
@@ -857,10 +871,14 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="podcast__item podcast__item-overflow animate__animated animate__slideInDown">
+                        <li class="podcast__item flex">
                             <div class="podcast__picture">
-                                <img class="podcast__image" src="images/podcast/podcast-10.jpg" alt="Изображение подкаста"
-                                     aria-hidden="true">
+                                <picture class="podcast__image">
+                                    <source srcset="images/podcast/podcast-10.jpg" media="(min-width:768px)">
+                                    <source srcset="images/podcast/podcast-10-320.jpg" media="(max-width:767px)">
+                                    <img class="podcast__image" src="images/podcast/podcast-10.jpg"
+                                         alt="Изображение подкаста" aria-hidden="true">
+                                </picture>
                                 <time class="date" datetime="07-03">03&nbsp;июля</time>
                             </div>
                             <div class="podcast__info">
@@ -901,10 +919,14 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="podcast__item podcast__item-overflow animate__animated animate__slideInDown">
+                        <li class="podcast__item flex">
                             <div class="podcast__picture">
-                                <img class="podcast__image" src="images/podcast/podcast-11.jpg" alt="Изображение подкаста"
-                                     aria-hidden="true">
+                                <picture class="podcast__image">
+                                    <source srcset="images/podcast/podcast-11.jpg" media="(min-width:768px)">
+                                    <source srcset="images/podcast/podcast-11-320.jpg" media="(max-width:767px)">
+                                    <img class="podcast__image" src="images/podcast/podcast-11.jpg"
+                                         alt="Изображение подкаста" aria-hidden="true">
+                                </picture>
                                 <time class="date" datetime="04-15">15&nbsp;апреля</time>
                             </div>
                             <div class="podcast__info">
@@ -945,10 +967,14 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="podcast__item podcast__item-overflow flex animate__animated animate__slideInDown">
+                        <li class="podcast__item flex">
                             <div class="podcast__picture">
-                                <img class="podcast__image" src="images/podcast/podcast-12.jpg" alt="Изображение подкаста"
-                                     aria-hidden="true">
+                                <picture class="podcast__image">
+                                    <source srcset="images/podcast/podcast-12.jpg" media="(min-width:768px)">
+                                    <source srcset="images/podcast/podcast-12-320.jpg" media="(max-width:767px)">
+                                    <img class="podcast__image" src="images/podcast/podcast-12.jpg"
+                                         alt="Изображение подкаста" aria-hidden="true">
+                                </picture>
                                 <time class="date" datetime="08-12">12&nbsp;августа</time>
                             </div>
                             <div class="podcast__info">
@@ -1008,10 +1034,10 @@
                                 Автор:
                             </h3>
                             <select class="broadcast__select" id="custom-select" name="select" aria-label="Выбор автора">
-                                <option value="" selected tabindex="0">Дмитрий Гутенберг</option>
-                                <option value="Татьяна Флеганова" tabindex="0">Татьяна Флеганова</option>
-                                <option value="Анна Васильева" tabindex="0">Анна Васильева</option>
-                                <option value="Пётр Дмитриевский" tabindex="0">Пётр Дмитриевский</option>
+                                <option value="" selected>Дмитрий Гутенберг</option>
+                                <option value="Татьяна Флеганова">Татьяна Флеганова</option>
+                                <option value="Анна Васильева">Анна Васильева</option>
+                                <option value="Пётр Дмитриевский">Пётр Дмитриевский</option>
                             </select>
                         </div>
                     </div>
@@ -1026,45 +1052,50 @@
                     </div>
                 </div>
                 <ul class="broadcast__list li-reset flex">
-                    <li class="broadcast__item" tabindex="0">
-                        <picture class="broadcast__picture">
-                            <source srcset="images/broadcast/broadcast-1.jpg" media="(min-width:540px)">
-                            <source srcset="images/broadcast/broadcast-1-320.jpg" media="(max-width:539px)">
-                            <img class="broadcast__picture" src="images/broadcast/broadcast-1.jpg" alt="Изображение передачи"
-                                 aria-hidden="true">
-                        </picture>
-                        <div class="broadcast__descr">
-                            <h3 class="broadcast__title">
-                                О&nbsp;людях и&nbsp;книгах
-                            </h3>
-                            <span class="broadcast__info">
+                    <li class="broadcast__item">
+                        <a class="broadcast__link" href="#">
+                            <picture class="broadcast__picture">
+                                <source srcset="images/broadcast/broadcast-1.jpg" media="(min-width:540px)">
+                                <source srcset="images/broadcast/broadcast-1-320.jpg" media="(max-width:539px)">
+                                <img class="broadcast__picture" src="images/broadcast/broadcast-1.jpg" alt="Изображение передачи"
+                                     aria-hidden="true">
+                            </picture>
+                            <div class="broadcast__descr">
+                                <h3 class="broadcast__title">
+                                    О&nbsp;людях и&nbsp;книгах
+                                </h3>
+                                <span class="broadcast__info">
                                 Анонсируется отдельно
                             </span>
-                            <a class="broadcast__link" href="#">
-                                Подробнее
-                            </a>
-                        </div>
+                                <span class="broadcast__link-button">
+                                    Подробнее
+                                </span>
+                            </div>
+                        </a>
                     </li>
-                    <li class="broadcast__item" tabindex="0">
-                        <picture class="broadcast__picture">
-                            <source srcset="images/broadcast/broadcast-2.jpg" media="(min-width:540px)">
-                            <source srcset="images/broadcast/broadcast-2-320.jpg" media="(max-width:539px)">
-                            <img class="broadcast__picture" src="images/broadcast/broadcast-2.jpg" alt="Изображение передачи"
-                                 aria-hidden="true">
-                        </picture>
-                        <div class="broadcast__descr">
-                            <h3 class="broadcast__title">
-                                Графомания&nbsp;td.
-                            </h3>
-                            <span class="broadcast__info">
-                            По&nbsp;понедельникам в&nbsp;10:00
-                            </span>
-                            <a class="broadcast__link" href="#">
-                                Подробнее
-                            </a>
-                        </div>
+                    <li class="broadcast__item">
+                        <a class="broadcast__link" href="#">
+                            <picture class="broadcast__picture">
+                                <source srcset="images/broadcast/broadcast-2.jpg" media="(min-width:540px)">
+                                <source srcset="images/broadcast/broadcast-2-320.jpg" media="(max-width:539px)">
+                                <img class="broadcast__picture" src="images/broadcast/broadcast-2.jpg" alt="Изображение передачи"
+                                    aria-hidden="true">
+                            </picture>
+                            <div class="broadcast__descr">
+                                <h3 class="broadcast__title">
+                                    Графомания&nbsp;td.
+                                </h3>
+                                <span class="broadcast__info">
+                                По&nbsp;понедельникам в&nbsp;10:00
+                                </span>
+                                <span class="broadcast__link-button">
+                                    Подробнее
+                                </span>
+                            </div>
+                        </a>
                     </li>
-                    <li class="broadcast__item" tabindex="0">
+                    <li class="broadcast__item">
+                        <a class="broadcast__link" href="#">
                         <picture class="broadcast__picture">
                             <source srcset="images/broadcast/broadcast-3.jpg" media="(min-width:540px)">
                             <source srcset="images/broadcast/broadcast-3-320.jpg" media="(max-width:539px)">
@@ -1078,12 +1109,14 @@
                             <span class="broadcast__info">
                             По&nbsp;вторникам в&nbsp;12:00
                         </span>
-                            <a class="broadcast__link" href="#">
+                            <span class="broadcast__link-button">
                                 Подробнее
-                            </a>
+                            </span>
                         </div>
+                        </a>
                     </li>
-                    <li class="broadcast__item" tabindex="0">
+                    <li class="broadcast__item">
+                        <a class="broadcast__link" href="#">
                         <picture class="broadcast__picture">
                             <source srcset="images/broadcast/broadcast-4.jpg" media="(min-width:540px)">
                             <source srcset="images/broadcast/broadcast-4-320.jpg" media="(max-width:539px)">
@@ -1097,12 +1130,14 @@
                             <span class="broadcast__info">
                             По&nbsp;пятницам в&nbsp;17:00
                         </span>
-                            <a class="broadcast__link" href="#">
+                            <span class="broadcast__link-button">
                                 Подробнее
-                            </a>
+                            </span>
                         </div>
+                        </a>
                     </li>
-                    <li class="broadcast__item" tabindex="0">
+                    <li class="broadcast__item">
+                        <a class="broadcast__link" href="#">
                         <picture class="broadcast__picture">
                             <source srcset="images/broadcast/broadcast-5.jpg" media="(min-width:540px)">
                             <source srcset="images/broadcast/broadcast-5-320.jpg" media="(max-width:539px)">
@@ -1116,12 +1151,14 @@
                             <span class="broadcast__info">
                             По&nbsp;субботам в&nbsp;10:00
                         </span>
-                            <a class="broadcast__link" href="#">
+                            <span class="broadcast__link-button">
                                 Подробнее
-                            </a>
+                            </span>
                         </div>
+                        </a>
                     </li>
-                    <li class="broadcast__item" tabindex="0">
+                    <li class="broadcast__item">
+                        <a class="broadcast__link" href="#">
                         <picture class="broadcast__picture">
                             <source srcset="images/broadcast/broadcast-6.jpg" media="(min-width:540px)">
                             <source srcset="images/broadcast/broadcast-6-320.jpg" media="(max-width:539px)">
@@ -1135,10 +1172,11 @@
                             <span class="broadcast__info">
                             По&nbsp;воскресеньям в&nbsp;15:30
                         </span>
-                            <a class="broadcast__link" href="#">
+                            <span class="broadcast__link-button">
                                 Подробнее
-                            </a>
+                            </span>
                         </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -1168,57 +1206,73 @@
                 <div class="guest__content flex">
                         <ul class="accordion guest__list li-reset" role="tablist">
                             <li class="guest__item">
-                                <div class="guest__item-wrapper flex" tabindex="0">
+                                <div class="guest__item-wrapper flex">
                                     <h3 class="guest__title">
                                         Блогеры
                                     </h3>
                                     <span class="guest__icon" role="button" aria-label="Развернуть/Свернуть"></span>
                                 </div>
                                 <ul class="guest__expanded-list li-reset">
-                                    <li class="guest__expanded-item" id="guest-1" tabindex="0">
-                                        <a href="#">Сергей Денисов</a>
+                                    <li class="guest__expanded-item" id="guest-1">
+                                        <a class="guest-initials" href="#guest__info-1"  id="guest-init-1" data-path="SergeyDenisov">
+                                            Сергей Денисов
+                                        </a>
                                     </li>
-                                    <li class="guest__expanded-item" id="guest-2" tabindex="0">
-                                        <a href="#">Матвей Мечников</a>
+                                    <li class="guest__expanded-item" id="guest-2">
+                                        <a class="guest-initials" href="#guest__info-2" id="guest-init-2" data-path="MatveyMarchenko">
+                                            Матвей Мечников
+                                        </a>
                                     </li>
-                                    <li class="guest__expanded-item" id="guest-3" tabindex="0">
-                                        <a href="#">Константин Прусино</a>
+                                    <li class="guest__expanded-item" id="guest-3">
+                                        <a class="guest-initials" href="#guest__info-3" id="guest-init-3" data-path="KostyaPrusino">
+                                            Константин Прусино
+                                        </a>
                                     </li>
-                                    <li class="guest__expanded-item" id="guest-4" tabindex="0">
-                                        <a href="#">Иван Калитников</a>
+                                    <li class="guest__expanded-item" id="guest-4">
+                                        <a class="guest-initials" href="#guest__info-4" id="guest-init-4" data-path="IvanKalitnikov">
+                                            Иван Калитников
+                                        </a>
                                     </li>
-                                    <li class="guest__expanded-item" id="guest-5" tabindex="0">
-                                        <a href="#">Евгений Войновский</a>
+                                    <li class="guest__expanded-item">
+                                        <a class="guest-initials" href="#guest__info-5" id="guest-init-5" data-path="EvgeniyVoinovskiy">
+                                            Евгений Войновский
+                                        </a>
                                     </li>
-                                    <li class="guest__expanded-item" id="guest-6" tabindex="0">
-                                        <a href="#guest__info-6">Ольга Мартынова</a>
+                                    <li class="guest__expanded-item" id="guest-6">
+                                        <a class="guest-initials" href="#guest__info-6" id="guest-init-6" data-path="OlgaMartwnova">
+                                            Ольга Мартынов
+                                        </a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Дмитрий Михалок
+                                    <li class="guest__expanded-item" id="guest-7">
+                                        <a class="guest-initials" href="#guest__info-7" id="guest-init-7" data-path="DmitriyMihalok">
+                                            Дмитрий Михалок
+                                        </a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Пётр Пиотровский
+                                    <li class="guest__expanded-item" id="guest-8">
+                                        <a class="guest-initials" href="#guest__info-8" id="guest-init-8" data-path="PeterPiotrovskiy">
+                                            Пётр Пиотровский
+                                        </a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Олег Свиридовский
+                                    <li class="guest__expanded-item">
+                                        <a class="guest-initials" href="#guest__info-9" id="guest-init-9" data-path="OlegSviridovskiy">Олег Свиридовский</a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Владислав Кауперс
+                                    <li class="guest__expanded-item">
+                                        <a class="guest-initials" href="#" data-path="VladislavKaurpers">Владислав Кауперс</a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Михаил Пожитников
+                                    <li class="guest__expanded-item">
+                                        <a class="guest-initials" href="#" data-path="MihaelPojitnikov">Михаил Пожитников</a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Георгий Полуян
+                                    <li class="guest__expanded-item">
+                                        <a class="guest-initials" href="#" data-path="GrogotiyPoluyan">Георгий Полуян</a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Денис Тельман
+                                    <li class="guest__expanded-item">
+                                        <a class="guest-initials" href="#" data-path="DenisTelman">Денис Тельман</a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Юрий Горин
+                                    <li class="guest__expanded-item">
+                                        <a class="guest-initials" href="#" data-path="YuriGorin">Юрий Горин</a>
                                     </li>
-                                    <li class="guest__expanded-item" tabindex="0">
-                                        Максим Сергеев
+                                    <li class="guest__expanded-item">
+                                        <a class="guest-initials" href="#" data-path="MaxSergeev">Максим Сергеев</a>
                                     </li>
                                 </ul>
                             <li class="guest__item">
@@ -1276,7 +1330,7 @@
                                 Тут будет фото гостя
                             </span>
                         </div>
-                        <div class="guest__info animate__animated animate__slideInDown" id="guest__info-6">
+                        <div class="guest__info" id="guest__info-6" data-target="OlgaMartwnova">
                             <picture class="guest__avatar">
                                 <source srcset="images/guests/user.jpg" media="(min-width:1920px)">
                                 <source srcset="images/guests/user-1024.jpg" media="(min-width:1024px)">
@@ -1289,25 +1343,16 @@
                                 <li class="social-item social-item--guest">
                                     <a class="social-link social-link--insta" href="#" target="_blank" rel="noopener"
                                        aria-label="Мы в instagram">
-                                        <svg class="social-icon" tabindex="1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
-                                        </svg>
                                     </a>
                                 </li>
                                 <li class="social-item">
                                     <a class="social-link social-link--fb" href="#" target="_blank" rel="noopener"
                                        aria-label="Мы в fb">
-                                        <svg class="social-icon" tabindex="1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
-                                        </svg>
                                     </a>
                                 </li>
                                 <li class="social-item">
                                     <a class="social-link social-link--twitter" href="#" target="_blank" rel="noopener"
                                        aria-label="Мы в twitter">
-                                        <svg class="social-icon" tabindex="1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M22.1621 5.65593C21.3986 5.99362 20.589 6.2154 19.7601 6.31393C20.6338 5.79136 21.2878 4.96894 21.6001 3.99993C20.7801 4.48793 19.8811 4.82993 18.9441 5.01493C18.3147 4.34151 17.4804 3.89489 16.571 3.74451C15.6616 3.59413 14.728 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0772 6.14972C11.6979 6.98983 11.6068 7.93171 11.8181 8.82893C10.1552 8.74558 8.52838 8.31345 7.04334 7.56059C5.55829 6.80773 4.24818 5.75097 3.19805 4.45893C2.82634 5.09738 2.63101 5.82315 2.63205 6.56193C2.63205 8.01193 3.37005 9.29293 4.49205 10.0429C3.82806 10.022 3.17869 9.84271 2.59805 9.51993V9.57193C2.59825 10.5376 2.93242 11.4735 3.5439 12.221C4.15538 12.9684 5.00653 13.4814 5.95305 13.6729C5.33667 13.84 4.69036 13.8646 4.06305 13.7449C4.32992 14.5762 4.85006 15.3031 5.55064 15.824C6.25123 16.3449 7.09718 16.6337 7.97005 16.6499C7.10253 17.3313 6.10923 17.8349 5.04693 18.1321C3.98464 18.4293 2.87418 18.5142 1.77905 18.3819C3.69075 19.6114 5.91615 20.264 8.18905 20.2619C15.8821 20.2619 20.0891 13.8889 20.0891 8.36193C20.0891 8.18193 20.0841 7.99993 20.0761 7.82193C20.8949 7.23009 21.6017 6.49695 22.1631 5.65693L22.1621 5.65593Z" fill="#A1A6B4"/>
-                                        </svg>
                                     </a>
                                 </li>
                             </ul>
@@ -1319,6 +1364,199 @@
                                 культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную
                                 блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является
                                 с&nbsp;2016&nbsp;года.
+                            </p>
+                            <button class="guest__btn btn-reset">
+                                Эфиры с&nbsp;гостем
+                            </button>
+                        </div>
+                        <div class="guest__info" id="guest__info-1" data-target="SergeyDenisov">
+                            <picture class="guest__avatar">
+                                <source srcset="images/guests/user-sergey.jpg" media="(min-width:1920px)">
+                                <source srcset="images/guests/user-sergey-1024.jpg" media="(min-width:1024px)">
+                                <source srcset="images/guests/user-sergey-768.jpg" media="(min-width:768px)">
+                                <source srcset="images/guests/user-sergey-320.jpg" media="(max-width:767px)">
+                                <img class="guest__avatar" src="images/guests/user-sergey.jpg"
+                                     alt="Аватар" aria-hidden="true">
+                            </picture>
+                            <ul class="guest__social-list social-list li-reset flex">
+                                <li class="social-item social-item--guest">
+                                    <a class="social-link social-link--insta" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в instagram">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--fb" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в fb">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--twitter" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в twitter">
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4 class="guest__name">
+                                Сергей Денисов
+                            </h4>
+                            <p class="guest__person-info">
+                                Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат
+                                культурологии. Арт-критик газеты &laquo;Арт-терапия&raquo;. Ведёт активную
+                                блогерскую деятельность как куратор музея &laquo;Эрмитаж&raquo;, коим является
+                                с&nbsp;2008&nbsp;года.
+                            </p>
+                            <button class="guest__btn btn-reset">
+                                Эфиры с&nbsp;гостем
+                            </button>
+                        </div>
+                        <div class="guest__info" id="guest__info-2" data-target="MatveyMarchenko">
+                            <picture class="guest__avatar">
+                                <source srcset="images/guests/user-matvey.jpg" media="(min-width:1920px)">
+                                <source srcset="images/guests/user-matvey-1024.jpg" media="(min-width:1024px)">
+                                <source srcset="images/guests/user-matvey-768.jpg" media="(min-width:768px)">
+                                <source srcset="images/guests/user-matvey-320.jpg" media="(max-width:767px)">
+                                <img class="guest__avatar" src="images/guests/user-matvey.jpg"
+                                     alt="Аватар" aria-hidden="true">
+                            </picture>
+                            <ul class="guest__social-list social-list li-reset flex">
+                                <li class="social-item social-item--guest">
+                                    <a class="social-link social-link--insta" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в instagram">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--fb" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в fb">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--twitter" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в twitter">
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4 class="guest__name">
+                                Матвей Марченко
+                            </h4>
+                            <p class="guest__person-info">
+                                Российский искусствовед, арт-критик, дизайнер. Арт-критик блога &laquo;Street-Art&raquo;. Ведёт активную
+                                блогерскую деятельность как знаток &laquo;уличных&raquo; художников, коим является
+                                с&nbsp;2020&nbsp;года.
+                            </p>
+                            <button class="guest__btn btn-reset">
+                                Эфиры с&nbsp;гостем
+                            </button>
+                        </div>
+                        <div class="guest__info" id="guest__info-3" data-target="KostyaPrusino">
+                            <picture class="guest__avatar">
+                                <source srcset="images/guests/user-prusino.jpg" media="(min-width:1920px)">
+                                <source srcset="images/guests/user-prusino-1024.jpg" media="(min-width:1024px)">
+                                <source srcset="images/guests/user-prusino-768.jpg" media="(min-width:768px)">
+                                <source srcset="images/guests/user-prusino-320.jpg" media="(max-width:767px)">
+                                <img class="guest__avatar" src="images/guests/user-prusino.jpg"
+                                     alt="Аватар" aria-hidden="true">
+                            </picture>
+                            <ul class="guest__social-list social-list li-reset flex">
+                                <li class="social-item social-item--guest">
+                                    <a class="social-link social-link--insta" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в instagram">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--fb" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в fb">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--twitter" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в twitter">
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4 class="guest__name">
+                                Константин Прусино
+                            </h4>
+                            <p class="guest__person-info">
+                                Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат
+                                культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную
+                                блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является
+                                с&nbsp;2016&nbsp;года.
+                            </p>
+                            <button class="guest__btn btn-reset">
+                                Эфиры с&nbsp;гостем
+                            </button>
+                        </div>
+                        <div class="guest__info" id="guest__info-4" data-target="IvanKalitnikov">
+                            <picture class="guest__avatar">
+                                <source srcset="images/guests/user-kalitnikov.jpg" media="(min-width:1920px)">
+                                <source srcset="images/guests/user-kalitnikov-1024.jpg" media="(min-width:1024px)">
+                                <source srcset="images/guests/user-kalitnikov-768.jpg" media="(min-width:768px)">
+                                <source srcset="images/guests/user-kalitnikov-320.jpg" media="(max-width:767px)">
+                                <img class="guest__avatar" src="images/guests/user-kalitnikov.jpg"
+                                     alt="Аватар" aria-hidden="true">
+                            </picture>
+                            <ul class="guest__social-list social-list li-reset flex">
+                                <li class="social-item social-item--guest">
+                                    <a class="social-link social-link--insta" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в instagram">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--fb" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в fb">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--twitter" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в twitter">
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4 class="guest__name">
+                                Иван Калитников
+                            </h4>
+                            <p class="guest__person-info">
+                                Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат
+                                культурологии. Арт-критик газеты &laquo;Арт-терапия&raquo;. Ведёт активную
+                                блогерскую деятельность как куратор музея &laquo;Эрмитаж&raquo;, коим является
+                                с&nbsp;2008&nbsp;года.
+                            </p>
+                            <button class="guest__btn btn-reset">
+                                Эфиры с&nbsp;гостем
+                            </button>
+                        </div>
+                        <div class="guest__info" id="guest__info-5" data-target="EvgeniyVoinovskiy">
+                            <picture class="guest__avatar">
+                                <source srcset="images/guests/user-evgeniy.jpg" media="(min-width:1920px)">
+                                <source srcset="images/guests/user-evgeniy-1024.jpg" media="(min-width:1024px)">
+                                <source srcset="images/guests/user-evgeniy-768.jpg" media="(min-width:768px)">
+                                <source srcset="images/guests/user-evgeniy-320.jpg" media="(max-width:767px)">
+                                <img class="guest__avatar" src="images/guests/user-evgeniy.jpg"
+                                     alt="Аватар" aria-hidden="true">
+                            </picture>
+                            <ul class="guest__social-list social-list li-reset flex">
+                                <li class="social-item social-item--guest">
+                                    <a class="social-link social-link--insta" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в instagram">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--fb" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в fb">
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link social-link--twitter" href="#" target="_blank" rel="noopener"
+                                       aria-label="Мы в twitter">
+                                    </a>
+                                </li>
+                            </ul>
+                            <h4 class="guest__name">
+                                Евгений Войновский
+                            </h4>
+                            <p class="guest__person-info">
+                                Арт-критик, дизайнер, член союза российских художников, побетель международных конкурсов
+                                по современному искусству. Ведёт активную блогерскую деятельность как знаток современного
+                                искусства, коим является с&nbsp;2010&nbsp;года.
                             </p>
                             <button class="guest__btn btn-reset">
                                 Эфиры с&nbsp;гостем
@@ -1338,40 +1576,40 @@
                         <h3 class="radio-heading">
                             Жанр
                         </h3>
-                        <div class="radio-container" tabindex="0">
+                        <form class="radio-container">
                             <label for="post-punk" class="radio-custom">
                                 <input id="post-punk" class="radio-input" type="radio" name="genre" value="Постпанк" checked="checked">
-                                <span class="radio-text" tabindex="0">Постпанк</span>
+                                <span class="radio-text">Постпанк</span>
                             </label>
                             <label for="hardcore" class="radio-custom">
                                 <input id="hardcore" class="radio-input" type="radio" name="genre" value="hardcore">
-                                <span class="radio-text" tabindex="0">Хардкор</span>
+                                <span class="radio-text">Хардкор</span>
                             </label>
                             <label class="radio-custom">
                                 <input id="punk-rock" class="radio-input" type="radio" name="genre" value="punk-rock">
-                                <span class="radio-text" tabindex="0">Панк-рок</span>
+                                <span class="radio-text">Панк-рок</span>
                             </label>
                             <label class="radio-custom">
                                 <input id="rock" class="radio-input" type="radio" name="genre" value="rock">
-                                <span class="radio-text" tabindex="0">Рок</span>
+                                <span class="radio-text">Рок</span>
                             </label>
                             <label class="radio-custom">
                                 <input id="progressive-rock" class="radio-input" type="radio" name="genre" value="progressive-rock">
-                                <span class="radio-text" tabindex="0">Прогрессивный рок</span>
+                                <span class="radio-text">Прогрессивный рок</span>
                             </label>
                             <label class="radio-custom">
                                 <input id="electonic" class="radio-input" type="radio" name="genre" value="electonic">
-                                <span class="radio-text" tabindex="0">Электронная музыка</span>
+                                <span class="radio-text">Электронная музыка</span>
                             </label>
                             <label class="radio-custom">
                                 <input id="classical" class="radio-input" type="radio" name="genre" value="classical">
-                                <span class="radio-text" tabindex="0">Классическая музыка</span>
+                                <span class="radio-text">Классическая музыка</span>
                             </label>
                             <label class="radio-custom">
                                 <input id="nature-sounds" class="radio-input" type="radio" name="genre" value="nature-sounds">
-                                <span class="radio-text" tabindex="0">Звуки природы и&nbsp;шум города</span>
+                                <span class="radio-text">Звуки природы и&nbsp;шум города</span>
                             </label>
-                        </div>
+                        </form>
                     </div>
                     <div class="playlist__copyright-desktop">
                         <p class="playlist__copyright-text">
@@ -1385,28 +1623,31 @@
                     </div>
                 </div>
                 <ul class="playlist__list li-reset flex">
-                        <li class="playlist__item" tabindex="0">
-                            <div class="playlist__picture-container">
-                                <picture class="playlist__cover">
-                                    <source srcset="images/playlist/playlist-1.jpg" media="(min-width:1920px)">
-                                    <source srcset="images/playlist/playlist-1-1024.jpg" media="(min-width:1024px)">
-                                    <source srcset="images/playlist/playlist-1-320.jpg" media="(max-width:1023px)">
-                                    <img class="playlist__cover" src="images/playlist/playlist-1.jpg" alt="Обложка альбома"
+                        <li class="playlist__item">
+                            <a class="playlist__link">
+                                <div class="playlist__picture-container">
+                                    <picture class="playlist__cover">
+                                        <source srcset="images/playlist/playlist-1.jpg" media="(min-width:1920px)">
+                                        <source srcset="images/playlist/playlist-1-1024.jpg" media="(min-width:1024px)">
+                                        <source srcset="images/playlist/playlist-1-320.jpg" media="(max-width:1023px)">
+                                        <img class="playlist__cover" src="images/playlist/playlist-1.jpg" alt="Обложка альбома"
+                                             aria-hidden="true">
+                                    </picture>
+                                    <img class="playlist__country" src="images/playlist/country-russia.jpg" alt="Страна"
                                          aria-hidden="true">
-                                </picture>
-                                <img class="playlist__country" src="images/playlist/country-russia.jpg" alt="Страна"
-                                     aria-hidden="true">
-                            </div>
-                            <div class="playlist__wrapper">
-                                <h3 class="playlist__title">
-                                    Ploho
-                                </h3>
-                                <span class="playlist__info">
+                                </div>
+                                <div class="playlist__wrapper">
+                                    <h3 class="playlist__title">
+                                        Ploho
+                                    </h3>
+                                    <span class="playlist__info">
                                     3&nbsp;последних альбома
                                 </span>
-                            </div>
+                                </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-2.jpg" media="(min-width:1920px)">
@@ -1426,8 +1667,10 @@
                                     Все песни
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-3.jpg" media="(min-width:1920px)">
@@ -1447,8 +1690,10 @@
                                     Все синглы
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-4.jpg" media="(min-width:1920px)">
@@ -1468,8 +1713,10 @@
                                     3&nbsp;последних альбома
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-5.jpg" media="(min-width:1920px)">
@@ -1489,8 +1736,10 @@
                                     Все EP
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-6.jpg" media="(min-width:1920px)">
@@ -1510,8 +1759,10 @@
                                     Альбом &laquo;Колокол&raquo;
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-7.jpg" media="(min-width:1920px)">
@@ -1531,8 +1782,10 @@
                                     Лучшее за&nbsp;всё время
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-8.jpg" media="(min-width:1920px)">
@@ -1552,8 +1805,10 @@
                                     Лучшее за&nbsp;всё время
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-9.jpg" media="(min-width:1920px)">
@@ -1573,8 +1828,10 @@
                                     Период 1984-1988
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-10.jpg" media="(min-width:1920px)">
@@ -1594,8 +1851,10 @@
                                     Хиты
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-11.jpg" media="(min-width:1920px)">
@@ -1615,8 +1874,10 @@
                                     Все синглы
                                 </span>
                             </div>
+                            </a>
                         </li>
-                        <li class="playlist__item" tabindex="0">
+                        <li class="playlist__item">
+                            <a class="playlist__link">
                             <div class="playlist__picture-container">
                                 <picture class="playlist__cover">
                                     <source srcset="images/playlist/playlist-12.jpg" media="(min-width:1920px)">
@@ -1636,6 +1897,7 @@
                                     3&nbsp;последних альбома
                                 </span>
                             </div>
+                            </a>
                         </li>
                     </ul>
                 <div class="playlist__copyright-mobile">
@@ -1711,7 +1973,7 @@
                 </div>
             </div>
             <div class="modal" id="modal-promo">
-                <div class="modal-container">
+                <div class="modal-container-promo">
                     <div class="modal-header">
                         <button class="modal-header-btn modal-header-btn--promo btn-reset">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1726,13 +1988,25 @@
                     <div class="modal__product">
                         <ul class="product-list li-reset">
                             <li class="product-item">
-                                <img src="images/promo/modal-radio-red.png" alt="Изображение радиоприемника">
+                                <picture class="product-item__picture">
+                                    <source srcset="images/promo/modal-radio-red.png" media="(min-width:768px)">
+                                    <source srcset="images/promo/modal-radio-red-320.png" media="(max-width:767px)">
+                                    <img src="images/promo/modal-radio-red.png" alt="Изображение радиоприемника">
+                                </picture>
                             </li>
                             <li class="product-item">
-                                <img src="images/promo/modal-radio-blue.png" alt="Изображение радиоприемника">
+                                <picture class="product-item__picture">
+                                    <source srcset="images/promo/modal-radio-blue.png" media="(min-width:768px)">
+                                    <source srcset="images/promo/modal-radio-blue-320.png" media="(max-width:767px)">
+                                    <img src="images/promo/modal-radio-blue.png" alt="Изображение радиоприемника">
+                                </picture>
                             </li>
                             <li class="product-item">
-                                <img src="images/promo/modal-radio-green.png" alt="Изображение радиоприемника">
+                                <picture class="product-item__picture">
+                                    <source srcset="images/promo/modal-radio-green.png" media="(min-width:768px)">
+                                    <source srcset="images/promo/modal-radio-blue-320.png" media="(max-width:767px)">
+                                    <img src="images/promo/modal-radio-green.png" alt="Изображение радиоприемника">
+                                </picture>
                             </li>
                         </ul>
                     </div>
@@ -1840,13 +2114,13 @@
                     <button class="about-us__btn btn-reset" id="submit-btn">
                         Отправить
                     </button>
+                    <p class="about-us__agreement-container">
+                        <input class="about-us__agreement-box" type="checkbox" name="checkbox" id="agreement">
+                        <label class="about-us__agreement-text" for="agreement">
+                            Согласен на&nbsp;обработку персональных данных
+                        </label>
+                    </p>
                 </form>
-                <div class="about-us__agreement-container">
-                    <input class="about-us__agreement-box" type="checkbox" name="checkbox" id="agreement" >
-                    <label class="about-us__agreement-text" for="agreement">
-                        Согласен на&nbsp;обработку персональных данных
-                    </label>
-                </div>
             </div>
         </section>
     </main>
@@ -1854,40 +2128,28 @@
         <div class="content-container">
             <div class="footer__top flex">
                 <div class="footer__social-info">
-                    <a class="footer__logo" href="#">
+                    <a class="footer__logo" href="#" tabindex="-1">
                         <img class="logo-image logo-image--footer" src="images/footer/logo.png" alt="W-Wave">
                     </a>
                     <ul class="footer__social-list social-list li-reset flex">
                         <li class="social-item social-item--footer">
-                            <a class="social-link social-link--youtube" href="https://www.youtube.com" target="_blank"
+                            <a class="social-link social-link--footer social-link--youtube" href="https://www.youtube.com" target="_blank"
                                rel="noopener" aria-label="Мы на youtube">
-                            <svg class="social-icon social-icon--footer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.543 6.498C22 8.28 22 12 22 12C22 12 22 15.72 21.543 17.502C21.289 18.487 20.546 19.262 19.605 19.524C17.896 20 12 20 12 20C12 20 6.107 20 4.395 19.524C3.45 19.258 2.708 18.484 2.457 17.502C2 15.72 2 12 2 12C2 12 2 8.28 2.457 6.498C2.711 5.513 3.454 4.738 4.395 4.476C6.107 4 12 4 12 4C12 4 17.896 4 19.605 4.476C20.55 4.742 21.292 5.516 21.543 6.498ZM10 15.5L16 12L10 8.5V15.5Z" fill="#A1A6B4"/>
-                            </svg>
                         </a>
                         </li>
                         <li class="social-item social-item--footer">
-                            <a class="social-link social-link--insta" href="https://www.instagram.com" target="_blank"
+                            <a class="social-link social-link--footer social-link--insta" href="https://www.instagram.com" target="_blank"
                                rel="noopener" aria-label="Мы в instagram">
-                                <svg class="social-icon social-icon--footer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
-                                </svg>
                             </a>
                         </li>
                         <li class="social-item social-item--footer">
-                            <a class="social-link social-link--fb" href="https://facebook.com" target="_blank"
+                            <a class="social-link social-link--footer social-link--fb" href="https://facebook.com" target="_blank"
                                rel="noopener" aria-label="Мы в facebook">
-                                <svg class="social-icon social-icon--footer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
-                                </svg>
                             </a>
                         </li>
                         <li class="social-item social-item--footer">
-                            <a class="social-link social-link--twitter" href="https://twitter.com" target="_blank"
+                            <a class="social-link social-link--footer social-link--twitter" href="https://twitter.com" target="_blank"
                                rel="noopener" aria-label="Мы в twitter">
-                                <svg class="social-icon social-icon--footer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
-                                </svg>
                             </a>
                         </li>
                     </ul>
@@ -1954,6 +2216,9 @@
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/modal.js"></script>
+<script src="js/burger-menu.js"></script>
+<script src="js/podcast-more.js"></script>
+<script src="js/guests.js"></script>
 <script src="js/js.js"></script>
 </body>
 </html>

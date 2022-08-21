@@ -1,36 +1,58 @@
 /*------------------Modal-Global--------------*/
 
 .modal {
-    display: none;
+    box-sizing: border-box;
     position: fixed;
+    padding-top: 80px;
+    display: flex;
+    align-items: flex-start;
+    align-content: stretch;
+    justify-content: center;
+    z-index: 100;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, .5);
-    text-align: center;
+    width: 100%;
     height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .4s ease-in-out, opacity .4s ease-in-out;
 }
 
 .modal::-webkit-scrollbar {
-    display: none;
+    visibility: hidden;
 }
 
 .modal--active {
-    display: inline-block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal-container {
     box-sizing: border-box;
     position: relative;
-    max-width: 824px;
-    margin: 80px auto;
-    vertical-align: top;
-    background-color: rgba(18, 23, 35, 1);
     padding: 60px;
+    flex-grow: 1;
+    max-width: 824px;
+    background-color: rgba(18, 23, 35, 1);
+    transform: translateY(-100%);
+    transition: transform .5s ease-in-out;
+}
+
+.modal-container-promo {
+    box-sizing: border-box;
+    position: relative;
+    padding: 60px;
+    max-width: 824px;
+    background-color: rgba(18, 23, 35, 1);
+    transform: translateY(100%);
+    transition: transform .5s ease-in-out;
+}
+
+.modal-container--active {
+    transform: translateY(0%);
 }
 
 .modal-header-btn {
@@ -78,9 +100,10 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--main-color);
-    -webkit-transition: background-color .4s cubic-bezier(1, 0, 0, 1), color .4s cubic-bezier(1, 0, 0, 1);
-    -o-transition: background-color .4s cubic-bezier(1, 0, 0, 1), color .4s cubic-bezier(1, 0, 0, 1);
-    transition: background-color .4s cubic-bezier(1, 0, 0, 1), color .4s cubic-bezier(1, 0, 0, 1);
+    border-bottom: 1px solid transparent;
+    -webkit-transition: background-color .4s cubic-bezier(1, 0, 0, 1), color .4s cubic-bezier(1, 0, 0, 1), border-bottom-color .4s ease-in-out;
+    -o-transition: background-color .4s cubic-bezier(1, 0, 0, 1), color .4s cubic-bezier(1, 0, 0, 1), border-bottom-color .4s ease-in-out;
+    transition: background-color .4s cubic-bezier(1, 0, 0, 1), color .4s cubic-bezier(1, 0, 0, 1), border-bottom-color .4s ease-in-out;
 }
 
 .modal-header-link:focus-visible {
@@ -88,11 +111,11 @@
 }
 
 .modal-header-link:hover {
-    border-bottom: 1px solid var(--main-color);
+    border-bottom-color: var(--main-color);
 }
 
 .header-link:active {
-    border-bottom: 1px solid var(--primiry-dark);
+    border-bottom-color: var(--primiry-dark);
     color: var(--primiry-dark);
 }
 
@@ -223,6 +246,17 @@
 .modal-header-link--promo {
     color: var(--promo-color);
 }
+.modal-header-link--promo:focus {
+    outline-color: var(--promo-color);
+}
+
+.modal-header-link--promo:hover {
+    border-bottom-color: var(--promo-color);
+}
+
+.modal-header-link--promo:active {
+    color: #BB973E;
+}
 
 .modal__product {
     width: calc(100% + 60px);
@@ -239,6 +273,7 @@
     -ms-flex-direction: row;
     flex-direction: row;
     flex-shrink: 0;
+    -webkit-box-flex: 0;
     flex-grow: 0;
     overflow-y: hidden;
     overflow-x: auto;
@@ -283,7 +318,7 @@
 }
 
 .modal__order-number {
-    display:block;
+    display: block;
     text-align: left;
     font-family: 'Muller', sans-serif;
     font-weight: 400;
@@ -374,6 +409,32 @@
 
     .modal__product {
         width: calc(100% + 20px);
+    }
+
+    .modal-container-promo {
+        padding: 40px 20px;
+    }
+
+    .modal-header-btn {
+        top: 20px;
+        right: 20px;
+    }
+
+    .modal-header-title--promo::before {
+        content: url("../images/promo/modal-title-icon-320.svg");
+        padding-right: 8px;
+    }
+
+    .product-list {
+        padding-bottom: 20px;
+    }
+
+    .modal__booked {
+        font-size: 12px;
+    }
+
+    .modal__order-number {
+        font-size: 24px;
     }
 
 }
