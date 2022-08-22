@@ -2448,7 +2448,7 @@ img {
     align-items: center;
 }
 
-.about-us__agreement-text::before {
+.about-us__agreement-box+label::before {
     content: '';
     display: inline-block;
     width: 14px;
@@ -2467,8 +2467,8 @@ img {
     background-image: url("../images/about-us/checked.svg");
 }
 
-.about-us__agreement-box+label:focus::before {
-    border-bottom: 1px solid var(--primiry-light);
+.about-us__agreement-box:focus+label::before {
+    box-shadow: 0 0 0 0.15rem var(--primiry-light);
 }
 
 /*---------------Footer-------------------*/
