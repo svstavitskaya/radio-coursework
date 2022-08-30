@@ -12,12 +12,13 @@ burger.addEventListener('click',
     });
 
 burgerClose.addEventListener('click', function () {
+    document.body.classList.remove('stop-scroll');
     menu.classList.remove('nav-burger--active');
 });
 
 menuLinks.forEach(function(el) {
     el.addEventListener('click', function () {
-        menu.classList.remove('nav-burger--active');
         document.body.classList.remove('stop-scroll');
+        menu.classList.remove('nav-burger--active');
     });
 });

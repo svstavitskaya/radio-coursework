@@ -2984,6 +2984,10 @@ img {
 
 @media (max-width:1023px) {
 
+    .stop-scroll {
+        padding-right: 0;
+    }
+
     .content-container {
         max-width: 1023px;
         padding-left: 114px;
@@ -3715,6 +3719,8 @@ img {
     }
 
     .burger-top__container {
+        display: flex;
+        flex-direction: column;
         background-image: none;
     }
 
@@ -3729,10 +3735,10 @@ img {
     }
 
     .nav__list--burger {
-        display: block;
+        display: inline-block;
         columns: 2;
         column-gap: 42px;
-        width: 100%;
+        margin-bottom: 24px;
     }
 
     .nav__item:nth-last-child(2n) {
